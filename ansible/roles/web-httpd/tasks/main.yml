@@ -1,0 +1,16 @@
+- name: Install httpd
+  yum:
+    name: httpd
+    state: latest
+
+- name: Copy index.cgi to ec2 instances
+  copy: 
+    src: index.cgi
+    dest: /var/www/cgi-bin
+    mode: 0777
+
+- name: Enable and start httpd
+  systemd:
+    name: httpd
+    enabled: yes
+    state: started

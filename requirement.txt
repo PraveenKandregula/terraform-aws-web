@@ -1,0 +1,17 @@
+Infrastructure problem
+Problem:
+Use Vagrant development environment to setup an environment which does the following:
+1. Front-end web proxy (HAproxy or other of your choice). the front-end will do Load balancing for the
+backend layer. there are several LB modes, choose one, and familiarise yourself with other options.
+Please note it is ok to implement the simplest solution for the purpose of this assignment.
+2. Backend servers - at least 2, these could be nginx, apache, whichever you like and feel comfortable.
+The back-end servers should be balanced (any method) between them using the front-end proxy.
+3. Make sure that the backend servers present a test page which identifies them and can help
+understand which is which when content is served. eg. display the hostname.
+Guidelines:
+1) You have free rein to incorporate any software tools and hardware you need to streamline application
+deployment and infrastructure provisioning & configuration as long as they are Free/Libre/Open Source
+software (FLOSS). We request that you use Linux.
+2) You should use a virtualization solution such as VirtualBox for these environments. We will use
+VirtualBox, VMWare or EC2 (your choice) to build your environments.
+3) The ability for us to build your environments, in scripts and/or documentation, no binaries.
